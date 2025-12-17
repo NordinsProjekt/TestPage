@@ -47,10 +47,17 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@supports not (background-clip: text) {
+    .logo {
+        color: var(--primary-color);
+    }
 }
 
 .nav-links {
